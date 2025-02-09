@@ -35,6 +35,10 @@ You can download from the playstore if you use an android phone.
  <img src="https://github.com/user-attachments/assets/4759594c-da92-48a6-8580-ef00e88c8c9a" width="250">   | <img src="screenshots/s6.jpeg" width="250">  |
  
 
+## 🎨 UI/UX Credits
+
+UI/UX Design by Nipun Koshalya
+
 ## 🔌 Plugins
 
 | Name                                                                   | Usage                                         |
