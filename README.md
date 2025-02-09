@@ -2,12 +2,14 @@
 UNIMO Mobile App is a smart campus solution that provides real-time updates on the occupancy of key university facilities like the library, medical center, and canteens. Built using Flutter, Dart, and Firebase, the app helps students and staff make informed decisions and manage their time better by showing live data on facility availability. 
 <br>
 
-![home_cp](https://github.com/AnuV6/)
+![Section 1](https://github.com/user-attachments/assets/13f59f60-a59a-4efa-95dc-6c7ddf0ef46d)
+
 <br>
 
 To download this app, <a href="https://github.com/AnuV6/UNIMO-Mobile-App">click here</a> to see the codemagic builds. You can choose to install the `apk`.
-You can download from the appstore if you use an iPhone, iPad or a Mac with Silicon chip.
+You can download from the playstore if you use an android phone.
 <br>
+
 <a href="https://apps.apple.com/"><img src="https://github.com/user-attachments/assets/27307ac1-8bb9-400b-9482-658fb1b9ec0f" width="200"></img></a>
 <br> Please star⭐ the repo if you like what you see😉.
 
@@ -19,15 +21,13 @@ You can download from the appstore if you use an iPhone, iPad or a Mac with Sili
 
 ## ✨ Features
 
-- [x] Resume Score
-- [x] Show progress
-- [x] Skills Recommendations
-- [x] Courses Recommendations
-- [x] Internship Recommendations
-- [x] You tube video recommendations
-- [x] Resume writing Tips & suggestions 
-- [x] Easy apply for interns 
-- [x] Help to improve skills.
+- [x] User Management & Authentication
+- [x] Facility Occupancy Tracking
+- [x] Admin Panel & Reporting
+- [x] Student Scoreboard & Gamification
+- [x] Notifications & Alerts
+- [x] Security & Performance
+- [x] Integrations & Automation 
 
 ## 📸 ScreenShots
 
