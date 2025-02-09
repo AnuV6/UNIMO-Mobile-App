@@ -8,8 +8,7 @@ UNIMO Mobile App is a smart campus solution that provides real-time updates on t
 To download this app, <a href="https://github.com/AnuV6/UNIMO-Mobile-App">click here</a> to see the codemagic builds. You can choose to install the `apk`.
 You can download from the appstore if you use an iPhone, iPad or a Mac with Silicon chip.
 <br>
-<a href="https://apps.apple.com/"><img src="![app-store-png-logo-33115](https://github.com/user-attachments/assets/27307ac1-8bb9-400b-9482-658fb1b9ec0f)
-" width="200"></img></a>
+<a href="https://apps.apple.com/"><img src="https://github.com/user-attachments/assets/27307ac1-8bb9-400b-9482-658fb1b9ec0f" width="200"></img></a>
 <br> Please star⭐ the repo if you like what you see😉.
 
 ## 💻 Requirements
