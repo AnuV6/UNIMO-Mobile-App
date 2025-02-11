@@ -52,8 +52,8 @@ UI/UX Design by Nipun Koshalya
 
 ## 🤓 Author(s)
 
-<a href="https://github.com/AnuV6/UNIMO-Mobile-App/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AnuV6/UNIMO-Mobile-App" />
+<a href = "https://github.com/AnuV6/UNIMO-Mobile-App/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=AnuV6/UNIMO-Mobile-App"/>
 </a>
 
 ## 🔖 LICENCE
