@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 60),
+              const SizedBox(height: 40),
 
               // Logo Image
               Row(
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black54,
-                  fontSize: 14,
+                  fontSize: 18.5,
                 ),
               ),
               const SizedBox(height: 50),
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Handle login logic here
                 },
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 20),
             ],
           ),
         ),

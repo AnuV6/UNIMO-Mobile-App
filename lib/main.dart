@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 255, 255, 255)),
         useMaterial3: true,
       ),
-      home: const OnboardingScreen(),
+      home: const LoginScreen(),
     );
   }
 }
