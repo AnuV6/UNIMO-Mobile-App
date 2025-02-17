@@ -14,7 +14,7 @@ class Onboarding3 extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Spacer(flex: 2),
+              const SizedBox(height: 240),
               // Trophy Image (Local Image)
               Image.asset(
                 'assets/trophy.png', // Path to your local image
@@ -27,7 +27,8 @@ class Onboarding3 extends StatelessWidget {
               Text(
                 'Earn Badges & Make an Impact!',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color: Colors.black87,
+                      color: Colors.blue,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                 textAlign: TextAlign.center,

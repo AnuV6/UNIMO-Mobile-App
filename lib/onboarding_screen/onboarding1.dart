@@ -17,7 +17,7 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 40), // Top padding
+            const SizedBox(height: 240), // Top padding
 
             // Title Text
             const Padding(
@@ -33,7 +33,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 20), // Space between Title and Description
+            const SizedBox(height: 10), // Space between Title and Description
 
             // Description Text
             const Padding(
