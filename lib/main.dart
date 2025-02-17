@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:unimo_mobile_app/Screens/login_screen.dart';
 import 'package:unimo_mobile_app/onboarding_screen/onboarding1.dart';
 import 'package:unimo_mobile_app/onboarding_screen/onboarding2.dart';
 import 'package:unimo_mobile_app/onboarding_screen/onboarding3.dart';
