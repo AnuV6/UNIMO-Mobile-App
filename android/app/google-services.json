@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "43491695327",
+    "project_id": "unimoapp-ba1cb",
+    "storage_bucket": "unimoapp-ba1cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43491695327:android:c9e4f956563f345319276a",
+        "android_client_info": {
+          "package_name": "com.example.unimo_mobile_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5WwWrVIR9uNzgt1MZjjsKZLc_NNqCUzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

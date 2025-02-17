@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:unimo_mobile_app/Components/get_start_button.dart';
 import 'package:unimo_mobile_app/Components/input_field.dart';
 import 'package:unimo_mobile_app/Screens/registration_screen.dart'; // Import RegisterScreen
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,6 +15,21 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isLoginSelected = true;
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  Future<void> _login() async {
+    try {
+      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+        email: _usernameController.text,
+        password: _passwordController.text,
+      );
+      // Handle successful login
+      print('Login successful: ${userCredential.user}');
+    } on FirebaseAuthException catch (e) {
+      // Handle login error
+      print('Login failed: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,9 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               // Login button
               GetStartedButton(
-                onPressed: () {
-                  // Handle login logic here
-                },
+                onPressed: _login,
               ),
               const SizedBox(height: 20),
             ],
