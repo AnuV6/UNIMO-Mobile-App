@@ -3,7 +3,7 @@ import 'package:unimo_mobile_app/Components/get_start_button.dart';
 import 'package:unimo_mobile_app/Screens/login_screen.dart'; // Import LoginScreen
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

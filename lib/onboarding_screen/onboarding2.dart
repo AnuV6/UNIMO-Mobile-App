@@ -10,7 +10,7 @@ void main() {
 
 class Onboarding2 extends StatelessWidget {
   // Changed class name here
-  const Onboarding2({Key? key}) : super(key: key);
+  const Onboarding2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +90,7 @@ class Onboarding2 extends StatelessWidget {
 
 // Custom Animated Circular Progress Indicator
 class CustomCircularProgressIndicator extends StatefulWidget {
-  const CustomCircularProgressIndicator({Key? key}) : super(key: key);
+  const CustomCircularProgressIndicator({super.key});
 
   @override
   _CustomCircularProgressIndicatorState createState() =>
