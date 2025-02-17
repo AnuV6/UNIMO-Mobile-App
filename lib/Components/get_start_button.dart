@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BorderRadius, BuildContext, Color, Colors, EdgeInsets, ElevatedButton, FontWeight, RoundedRectangleBorder, SizedBox, StatelessWidget, Text, TextStyle, VoidCallback, Widget;
 
 class GetStartedButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -6,11 +6,11 @@ class GetStartedButton extends StatelessWidget {
   final Color color; // Allow customizable color
 
   const GetStartedButton({
-    Key? key,
+    super.key,
     this.onPressed,
     this.text = 'Login', // Default to 'Login' as per UI
     this.color = Colors.blue, // Default to bright blue
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

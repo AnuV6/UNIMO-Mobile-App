@@ -7,12 +7,12 @@ class UsernameInputField extends StatelessWidget {
   final String label;
 
   const UsernameInputField({
-    Key? key,
+    super.key,
     this.controller,
     this.errorText,
     this.onChanged,
     this.label = 'Username', // Default label text
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
