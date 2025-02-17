@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unimo_mobile_app/Components/get_start_button.dart';
+import 'package:unimo_mobile_app/Screens/login_screen.dart'; // Import LoginScreen
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -41,9 +42,9 @@ class RegisterScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _buildTabButton('Login', false),
+                    _buildTabButton('Login', false, context),
                     const SizedBox(width: 32),
-                    _buildTabButton('Sign Up', true),
+                    _buildTabButton('Sign Up', true, context),
                   ],
                 ),
                 const SizedBox(height: 32),
@@ -110,25 +111,38 @@ class RegisterScreen extends StatelessWidget {
   }
 
   /// Builds a tab button for switching between Login and Sign Up
-  Widget _buildTabButton(String text, bool isSelected) {
-    return Column(
-      children: [
-        Text(
-          text,
-          style: TextStyle(
-            fontSize: 18,
-            color: isSelected ? Colors.blue[400] : Colors.grey[600],
-            fontWeight: FontWeight.w500,
+  Widget _buildTabButton(String text, bool isSelected, BuildContext context) {
+    return InkWell(
+      onTap: () {
+        if (text == 'Login') {
+          // Navigate to LoginScreen when 'Login' is tapped
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const LoginScreen()),
+          );
+        } else {
+          // Handle 'Sign Up' behavior if needed (Stay on RegisterScreen)
+        }
+      },
+      child: Column(
+        children: [
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 18,
+              color: isSelected ? Colors.blue[400] : Colors.grey[600],
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
-        const SizedBox(height: 4),
-        if (isSelected)
-          Container(
-            height: 2,
-            width: 60,
-            color: Colors.blue[400],
-          ),
-      ],
+          const SizedBox(height: 4),
+          if (isSelected)
+            Container(
+              height: 2,
+              width: 60,
+              color: Colors.blue[400],
+            ),
+        ],
+      ),
     );
   }
 

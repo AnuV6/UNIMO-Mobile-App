@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unimo_mobile_app/Components/get_start_button.dart';
 import 'package:unimo_mobile_app/Components/input_field.dart';
+import 'package:unimo_mobile_app/Screens/registration_screen.dart'; // Import RegisterScreen
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Access real-time updates on faculty facilities from wherever you are. Run by students for students.',
+                'Access real-time updates on faculty facilities from where ever you\'re at. Run by students for students.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black54,
@@ -102,9 +103,17 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget _buildTabButton(String text, bool isSelected) {
     return InkWell(
       onTap: () {
-        setState(() {
-          isLoginSelected = isSelected;
-        });
+        if (text == 'Sign Up') {
+          // Navigate to RegisterScreen when 'Sign Up' is tapped
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const RegisterScreen()),
+          );
+        } else {
+          setState(() {
+            isLoginSelected = isSelected;
+          });
+        }
       },
       child: Column(
         children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unimo_mobile_app/Components/get_start_button.dart';
+import 'package:unimo_mobile_app/Screens/login_screen.dart'; // Import LoginScreen
 
 class Onboarding3 extends StatelessWidget {
   const Onboarding3({Key? key}) : super(key: key);
@@ -59,7 +60,13 @@ class Onboarding3 extends StatelessWidget {
                 text: 'Get started',
                 color: Colors.blue,
                 onPressed: () {
-                  // Add navigation logic here
+                  // Navigate to the LoginScreen when the button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
                 },
               ),
               const SizedBox(height: 32),
