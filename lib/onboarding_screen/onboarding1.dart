@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 void main() {
   runApp(const MaterialApp(
-    home: OnboardingScreen(),
+    home: WelcomeScreen(),
     debugShowCheckedModeBanner: false,
   ));
 }
 
-class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({Key? key}) : super(key: key);
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,36 +17,29 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 40),
-
-            // Animated Circular Progress Indicator
-            const Center(
-              child: CustomCircularProgressIndicator(),
-            ),
-
-            const SizedBox(height: 50),
+            const SizedBox(height: 40), // Top padding
 
             // Title Text
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
-                'See real-time occupancy levels',
+                'Welcome to Unimo!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.blue, // Title color
                 ),
               ),
             ),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: 20), // Space between Title and Description
 
             // Description Text
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
-                'Unimo shows live updates for the library, medical center, and canteens, helping you plan your visit.',
+                'No more guessing! Check real-time campus facility occupancy before you go.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
@@ -56,14 +48,15 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 30),
+            const SizedBox(
+                height: 30), // Space between Description and Pagination Dots
 
-            // Pagination Indicator
+            // Pagination Dots
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildDot(isActive: false),
                 _buildDot(isActive: true),
+                _buildDot(isActive: false),
                 _buildDot(isActive: false),
               ],
             ),
@@ -84,97 +77,5 @@ class OnboardingScreen extends StatelessWidget {
         shape: BoxShape.circle,
       ),
     );
-  }
-}
-
-// Custom Animated Circular Progress Indicator
-class CustomCircularProgressIndicator extends StatefulWidget {
-  const CustomCircularProgressIndicator({Key? key}) : super(key: key);
-
-  @override
-  _CustomCircularProgressIndicatorState createState() =>
-      _CustomCircularProgressIndicatorState();
-}
-
-class _CustomCircularProgressIndicatorState
-    extends State<CustomCircularProgressIndicator>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 3),
-    )..repeat(reverse: false);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (context, child) {
-        return CustomPaint(
-          painter: CircularProgressPainter(_controller.value),
-          size: const Size(150, 150),
-        );
-      },
-    );
-  }
-}
-
-class CircularProgressPainter extends CustomPainter {
-  final double progress;
-  CircularProgressPainter(this.progress);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    Paint backgroundPaint = Paint()
-      ..color = Colors.red
-      ..strokeWidth = 10
-      ..style = PaintingStyle.stroke;
-
-    Paint progressPaint = Paint()
-      ..color = Colors.greenAccent
-      ..strokeWidth = 10
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round;
-
-    Paint handPaint = Paint()
-      ..color = Colors.greenAccent
-      ..strokeWidth = 8
-      ..strokeCap = StrokeCap.round;
-
-    Offset center = Offset(size.width / 2, size.height / 2);
-    double radius = size.width / 2;
-
-    canvas.drawCircle(center, radius, backgroundPaint);
-    canvas.drawArc(
-      Rect.fromCircle(center: center, radius: radius),
-      0, // Start from right
-      progress * 2 * pi,
-      false,
-      progressPaint,
-    );
-
-    // Draw the clock hand
-    double angle = progress * 2 * pi;
-    Offset handEnd = Offset(
-      center.dx + radius * cos(angle),
-      center.dy + radius * sin(angle),
-    );
-    canvas.drawLine(center, handEnd, handPaint);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
   }
 }
