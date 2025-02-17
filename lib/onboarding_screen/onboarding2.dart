@@ -35,7 +35,7 @@ class Onboarding2 extends StatelessWidget {
                 'See real-time occupancy levels',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.blue, // Title color
                 ),
